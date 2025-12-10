@@ -1,0 +1,174 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #52336D; /* Primary purple color */
+  --ifm-color-primary-dark: #3a224a; /* Darker purple */
+  --ifm-color-primary-darker: #2d1a3a; /* Even darker purple */
+  --ifm-color-primary-darkest: #1f122a; /* Darkest purple */
+  --ifm-color-primary-light: #6a448c; /* Lighter purple */
+  --ifm-color-primary-lighter: #7d57a0; /* Even lighter purple */
+  --ifm-color-primary-lightest: #9a78b9; /* Lightest purple */
+  --ifm-color-secondary: #EED82E; /* Secondary yellow color */
+  --ifm-color-secondary-dark: #d6c22a; /* Darker yellow */
+  --ifm-color-secondary-darker: #b8a624; /* Even darker yellow */
+  --ifm-color-secondary-darkest: #9a8a1e; /* Darkest yellow */
+  --ifm-color-secondary-light: #f0dc45; /* Lighter yellow */
+  --ifm-color-secondary-lighter: #f2e15c; /* Even lighter yellow */
+  --ifm-color-secondary-lightest: #f5e673; /* Lightest yellow */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #9a78b9;
+  --ifm-color-primary-dark: #7d57a0;
+  --ifm-color-primary-darker: #6a448c;
+  --ifm-color-primary-darkest: #52336D;
+  --ifm-color-primary-light: #b9a3d2;
+  --ifm-color-primary-lighter: #d2c2e3;
+  --ifm-color-primary-lightest: #eae3f2;
+  --ifm-color-secondary: #f5e673;
+  --ifm-color-secondary-dark: #f2e15c;
+  --ifm-color-secondary-darker: #f0dc45;
+  --ifm-color-secondary-darkest: #d6c22a;
+  --ifm-color-secondary-light: #f7ec8a;
+  --ifm-color-secondary-lighter: #f9f2a1;
+  --ifm-color-secondary-lightest: #fbf8b8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Professional Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #52336D 0%, #6a448c 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+.navbar__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.navbar__title {
+  color: #EED82E !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar__item:hover {
+  color: #EED82E !important;
+  transform: translateY(-1px);
+}
+
+.navbar__link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #EED82E !important;
+  transform: translateY(-1px);
+}
+
+.navbar__link--active {
+  color: #EED82E !important;
+  font-weight: 600;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown__menu {
+  background: #ffffff;
+  border: 1px solid #e0d6e8;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 250px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown--hoverable:hover .dropdown__menu,
+.dropdown--show .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block !important;
+}
+
+.dropdown__link {
+  color: #333333 !important;
+  padding: 0.75rem 1.5rem !important;
+  margin: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dropdown__link:hover {
+  background: linear-gradient(135deg, #52336D 0%, #6a448c 100%) !important;
+  color: #EED82E !important;
+}
+
+.dropdown__link--active {
+  background: linear-gradient(135deg, #52336D 0%, #6a448c 100%) !important;
+  color: #EED82E !important;
+}
+
+/* Mobile menu styling */
+.navbar-sidebar__brand {
+  background: linear-gradient(135deg, #52336D 0%, #6a448c 100%);
+}
+
+.navbar-sidebar__items .menu__list .menu__list-item .menu__link {
+  color: #333333;
+}
+
+.navbar-sidebar__items .menu__list .menu__list-item .menu__link:hover {
+  color: #52336D;
+  background-color: rgba(238, 216, 46, 0.1);
+}
+
+/* Button styling in navbar */
+.button--secondary {
+  background: #EED82E !important;
+  color: #3a224a !important;
+  border: none !important;
+}
+
+.button--secondary:hover {
+  background: #ffd200 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 216, 46, 0.4);
+}
+
+/* Logo styling */
+.navbar__logo img {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
