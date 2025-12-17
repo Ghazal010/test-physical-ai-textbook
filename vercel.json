@@ -1,22 +1,6 @@
 {
-  "git": {
-    "deploymentEnabled": true
-  },
-  "builds": [
-    {
-      "src": "Desktop/book/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build",
-        "buildCommand": "cd Desktop/book && npm run build",
-        "installCommand": "cd Desktop/book && npm install"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "framework": "docusaurus",
+  "buildCommand": "cd Desktop/book && npm run build",
+  "installCommand": "cd Desktop/book && npm install",
+  "outputDirectory": "Desktop/book/build"
 }
