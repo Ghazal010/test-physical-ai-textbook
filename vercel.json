@@ -1,12 +1,4 @@
 {
-  "framework": "docusaurus",
-  "builds": [
-    {
-      "src": "Desktop/book/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ]
+  "buildCommand": "cd Desktop/book && npm run build",
+  "outputDirectory": "Desktop/book/build"
 }
