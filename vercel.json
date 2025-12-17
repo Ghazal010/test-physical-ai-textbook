@@ -11,7 +11,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/Desktop/book/index.html"
+      "dest": "/index.html"
     }
   ]
 }
