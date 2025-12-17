@@ -1,20 +1,12 @@
 {
-  "framework": "none",
+  "installCommand": "cd Desktop/book && npm install",
   "builds": [
     {
       "src": "Desktop/book/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build",
-        "buildCommand": "npm run build",
-        "installCommand": "npm install"
+        "distDir": "build"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
     }
   ]
 }
