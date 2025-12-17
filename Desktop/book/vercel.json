@@ -1,5 +1,6 @@
 {
-  "installCommand": "cd Desktop/book && npm install",
+  "framework": "docusaurus",
   "buildCommand": "cd Desktop/book && npm run build",
-  "outputDirectory": "Desktop/book/build"
+  "outputDirectory": "Desktop/book/build",
+  "devCommand": "cd Desktop/book && npm run start"
 }
