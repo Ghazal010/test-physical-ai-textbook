@@ -1,4 +1,5 @@
 {
+  "rootDirectory": "Desktop/book",
   "builds": [
     {
       "src": "package.json",
