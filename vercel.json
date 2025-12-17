@@ -1,7 +1,17 @@
 {
-  "rootDirectory": "Desktop/book",
-  "framework": "docusaurus",
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "devCommand": "npm run start"
+  "builds": [
+    {
+      "src": "Desktop/book/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "Desktop/book/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/Desktop/book/index.html"
+    }
+  ]
 }
